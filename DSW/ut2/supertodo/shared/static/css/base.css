@@ -1,0 +1,141 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header {
+  background-color: aquamarine;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px grey;
+}
+
+form textarea {
+  text-align: left;
+  background-color: rgb(224, 215, 215);
+  padding: 20px 20px 20px;
+}
+
+.back_button {
+  font-size: 2em;
+  position: relative;
+  right: 225px;
+  top: 20px;
+}
+
+#id_name {
+  background-color: rgb(224, 215, 215);
+  text-align: left;
+}
+
+.enviar_button {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(124, 141, 143);
+  font-size: 17px;
+  line-height: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+fieldset {
+  border-width: 2px;
+  width: 20%;
+  border-color: black;
+  border-radius: 10px;
+  position: relative;
+  left: 500px;
+}
+
+form body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 15px 10px;
+  border-spacing: 0 15px;
+  border-radius: 10px;
+  position: relative;
+  right: 50px;
+  width: 65%;
+}
+
+.container {
+  position: relative;
+  left: 225px;
+  top: 50px;
+}
+
+.options {
+  display: flex;
+  position: relative;
+  left: 340px;
+  gap: 60px;
+}
+
+.task-option {
+  margin-left: 30px;
+}
+
+td {
+  background-color: rgba(145, 154, 155, 1);
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.buttoms {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(33, 132, 145, 1);
+  font-size: 17px;
+  line-height: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.buttoms:hover {
+  background: #566168ff;
+}
+
+.buttoms:active {
+  background: #838383ff;
+}
+
+.text-task-option {
+  font-size: 20px;
+}
+
+.detail_container {
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 30%;
+  border-radius: 10px;
+  position: relative;
+  left: 450px;
+}

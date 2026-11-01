@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{% url 'creatures:creatures-list'%}">Back</a>
+ <h3>{{creature.name}}</h3>
+  {{creature.type1}}
+  {{creature.attack}}
+  {{creature.defense}}
+  {{creature.speed}}
+  {{creature.generation}}
+{% endblock %}

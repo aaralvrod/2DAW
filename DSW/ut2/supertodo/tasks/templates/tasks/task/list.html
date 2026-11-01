@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Task | Home{% endblock title %}
+{% block content %}
+<div class = "options">
+  <a class = "buttoms" href="{% url 'tasks:task-list' %}">Todas las tareas</a>
+  <a class = "buttoms" href="{% url 'tasks:add-task' %}">Añadir tarea</a>
+  <a class = "buttoms" href="{% url 'tasks:completed-task' %}">Tareas completadas</a>
+  <a class = "buttoms" href="{% url 'tasks:pending-task' %}">Tareas pendientes</a>
+</div>
+<div class="container">
+  <table>
+  {% for task in tasks %}
+    <tr>
+      <td><a href="{% url 'tasks:task-detail' task.slug %}">{{ task.name }}</div></a></td>
+      <td><a class="task-option buttoms" href="{% url 'tasks:task-edit' task.slug %}">Editar tarea</a></td>
+      <td><a class="task-option buttoms" href="{% url 'tasks:task-delete' task.slug %}">Eliminar Tarea</a></td>
+      {% if task.completed %}
+        <td><a class="task-option buttoms" href="{% url 'tasks:task-toggle' task.slug %}">Completada ✅</a></td>
+      {% else %}
+        <td><a class="task-option buttoms" href="{% url 'tasks:task-toggle' task.slug %}">Pendiente ❌</a></td>
+      {% endif %}
+    </tr>
+  {% empty %}
+    <tr>
+      <td>Nada que hacer. ¡Enhorabuena!</td>
+    </tr>
+  {% endfor %}
+  </table>
+</div>
+{% endblock %}

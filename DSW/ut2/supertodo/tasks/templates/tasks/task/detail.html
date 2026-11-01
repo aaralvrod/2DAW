@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+<div class="detail_container">
+  <h3>{{ task.name }}</h3>
+  <p>{{ task.description }}</p>
+  <p>Tarea creada en: {{task.created_at}}</p>
+  <p>Tarea editada en: {{task.updated_at}}</p>
+  {% if task.completed %}
+    <p>Completada</p>
+  {% else %}
+    <p>Pendiente</p>
+  {% endif %}
+</div>
+<a class="back_button" href="{% url 'tasks:task-list'%}">🔙</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<fieldset>
+<form method="post">
+  {% csrf_token %}
+  {{form}}
+  <br>
+  <input class="enviar_button" type="submit" value="Guardar">
+</form>
+</fieldset>
+<a class="back_button" href="{% url 'tasks:task-list'%}">🔙</a>
+{% endblock content %}
